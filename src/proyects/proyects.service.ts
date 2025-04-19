@@ -20,18 +20,18 @@ export class ProyectsService {
   }
 
   findAll() {
-    return `This action returns all proyects`;
+    return this.proyectModel.find();
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return `This action returns a #${id} proyect`;
   }
 
-  update(id: number, updateProyectDto: UpdateProyectDto) {
+  update(id: string, updateProyectDto: UpdateProyectDto) {
     return `This action updates a #${id} proyect`;
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return `This action removes a #${id} proyect`;
   }
 }
