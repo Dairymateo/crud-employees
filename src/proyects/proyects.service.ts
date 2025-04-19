@@ -32,6 +32,6 @@ export class ProyectsService {
   }
 
   remove(id: string) {
-    return `This action removes a #${id} proyect`;
+    return this.proyectModel.findByIdAndDelete(id);
   }
 }
