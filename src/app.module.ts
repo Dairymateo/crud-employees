@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
+
 /* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';

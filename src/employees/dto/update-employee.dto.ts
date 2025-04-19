@@ -1,5 +1,4 @@
 /* eslint-disable prettier/prettier */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 import { PartialType } from '@nestjs/mapped-types';
 import { CreateEmployeeDto } from './create-employee.dto';
 import {IsEmail, IsNumber, IsOptional, IsString } from "class-validator";
