@@ -6,11 +6,13 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { EmployeesModule } from './employees/employees.module';
 import { MongooseModule as mongongoseModule } from '@nestjs/mongoose';
+import { ProyectsModule } from './proyects/proyects.module';
 
 @Module({
   imports: [
     mongongoseModule.forRoot('mongodb+srv://admintest:Udla@clusterudla01.grlj6.mongodb.net/CRUDTask'),
-    EmployeesModule],
+    EmployeesModule,
+    ProyectsModule],
   controllers: [AppController],
   providers: [AppService],
 })
