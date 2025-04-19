@@ -24,11 +24,11 @@ export class ProyectsService {
   }
 
   findOne(id: string) {
-    return `This action returns a #${id} proyect`;
+    return this.proyectModel.findById(id);
   }
 
   update(id: string, updateProyectDto: UpdateProyectDto) {
-    return `This action updates a #${id} proyect`;
+    return this.proyectModel.findByIdAndDelete(id, updateProyectDto);
   }
 
   remove(id: string) {
