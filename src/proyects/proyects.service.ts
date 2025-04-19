@@ -28,7 +28,7 @@ export class ProyectsService {
   }
 
   update(id: string, updateProyectDto: UpdateProyectDto) {
-    return this.proyectModel.findByIdAndDelete(id, updateProyectDto);
+    return this.proyectModel.findByIdAndUpdate(id, updateProyectDto);
   }
 
   remove(id: string) {
