@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { ProyectsService } from './proyects.service';
 import { CreateProyectDto } from './dto/create-proyect.dto';
