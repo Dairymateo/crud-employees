@@ -17,18 +17,18 @@ export class EmployeesService {
   }
 
   findAll() {
-    return `This action returns all employees`;
+    return this.employeeModel.find();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} employee`;
+  findOne(id: string) {
+    return this.employeeModel.findById(id);
   }
 
-  update(id: number, updateEmployeeDto: UpdateEmployeeDto) {
-    return `This action updates a #${id} employee`;
+  update(id: string, updateEmployeeDto: UpdateEmployeeDto) {
+    return this.employeeModel.findByIdAndUpdate(id, updateEmployeeDto);
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return `This action removes a #${id} employee`;
   }
 }
