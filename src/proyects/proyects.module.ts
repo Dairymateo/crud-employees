@@ -11,5 +11,6 @@ import { Proyect, ProyectSchema } from './Schema/Proyect.Schema';
   imports: [MongooseModule.forFeature([{ name: Proyect.name, schema: ProyectSchema }])],
   controllers: [ProyectsController],
   providers: [ProyectsService],
+  exports: [ProyectsService],
 })
 export class ProyectsModule {}
