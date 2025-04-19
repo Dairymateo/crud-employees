@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { IsEmail, IsNotEmpty, IsNumber, IsString, MinLength } from "class-validator";
+import { IsEmail, IsNotEmpty, IsNumber, IsString } from "class-validator";
 
 /* eslint-disable prettier/prettier */
 export class CreateEmployeeDto {
@@ -13,8 +13,6 @@ export class CreateEmployeeDto {
     email: string;
 
     @IsNotEmpty()
-    @IsNumber()
-    @MinLength(10)
     phone: string;
 
     @IsNotEmpty()

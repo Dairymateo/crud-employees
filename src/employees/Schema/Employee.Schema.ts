@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Prop, Schema } from "@nestjs/mongoose";
+import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 
 
 @Schema()
@@ -20,3 +20,6 @@ export class Employee {
     @Prop({ required: true })
     department: string;
 }
+
+
+export const EmployeeSchema = SchemaFactory.createForClass(Employee);
