@@ -35,18 +35,27 @@ export class TaskService {
   }
 
   findAll() {
-    return `This action returns all task`;
+    return this.taskModel.find().populate('employeeId').populate('proyectId');
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} task`;
+  findOne(id: string) {
+    return this.taskModel.findById(id).populate('employeeId').populate('proyectId');
   }
 
-  update(id: number, updateTaskDto: UpdateTaskDto) {
-    return `This action updates a #${id} task`;
+  async update(id: string, updateTaskDto: UpdateTaskDto) {
+    const updatedTask = await this.taskModel.findByIdAndUpdate(id, updateTaskDto, { new: true })
+      .populate('employeeId')
+      .populate('proyectId')
+      .exec();
+
+    if (!updatedTask) {
+      throw new NotFoundException(`Tarea con ID ${id} no encontrada`);
+    }
+
+    return updatedTask;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} task`;
+  remove(id: string) {
+    return this.taskModel.findByIdAndDelete(id);
   }
 }
