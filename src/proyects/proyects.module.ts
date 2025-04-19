@@ -1,4 +1,5 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable prettier/prettier */
+
 /* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { ProyectsService } from './proyects.service';
