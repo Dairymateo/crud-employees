@@ -12,6 +12,9 @@ export class Task {
     description: string;
 
     @Prop({ required: true })
+    date: Date;
+
+    @Prop({ required: true })
     status: string;
 
     @Prop({ required: true })
