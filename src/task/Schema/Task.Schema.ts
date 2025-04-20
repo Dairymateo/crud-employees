@@ -17,8 +17,6 @@ export class Task {
     @Prop({ required: true })
     status: string;
 
-    @Prop({ required: true })
-    priority: number;
 
     @Prop({ required: true })
     employeeId: string;

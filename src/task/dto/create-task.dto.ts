@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+import { Type } from "class-transformer";
 import { IsDate, IsNotEmpty, IsString } from "class-validator";
 
 /* eslint-disable prettier/prettier */
@@ -14,6 +15,7 @@ export class CreateTaskDto {
 
     @IsDate()
     @IsNotEmpty()
+    @Type(() => Date)
     date: Date;
 
     @IsString()
