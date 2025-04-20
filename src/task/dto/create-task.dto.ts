@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { IsNotEmpty, IsString } from "class-validator";
+import { IsDate, IsNotEmpty, IsString } from "class-validator";
 
 /* eslint-disable prettier/prettier */
 export class CreateTaskDto {
@@ -11,6 +11,10 @@ export class CreateTaskDto {
     @IsString()
     @IsNotEmpty()
     description: string;
+
+    @IsDate()
+    @IsNotEmpty()
+    date: Date;
 
     @IsString()
     @IsNotEmpty()
